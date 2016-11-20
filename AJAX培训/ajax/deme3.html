@@ -29,11 +29,12 @@ function myFunc(){
 
 	request.onreadystatechange = function(event) {  //先记住这个格式
 
-		if (request.readyState==4 && request.status==200) //先记住这个格式
+		if (request.readyState==4 && request.status==200){ //先记住这个格式
 
 			var PHP_echo = request.responseText;      //收到 对方的回复（就是PHP的echo内容）
 
 			myRe.innerHTML = PHP_echo;                //直接把回复内容 写到网页里
+		}  
 
 	}
  
