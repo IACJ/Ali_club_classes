@@ -1,0 +1,13 @@
+1.ajax的一些例子
+2.需要js基础
+3.配合w3的ajax和json观看口味更佳
+4.以上内容为前端内容
+5.submit-test例子里面有php，但是小伙伴可以自己写个json来代替php返回值
+6.要在服务器运行
+
+
+demo1 ： 通过JS（console） 操作dom
+
+demo2 ： 点击按钮，触发js函数，操作dom
+
+demo3 ： 点击按钮，触发js函数，请求服务器数据  (AJAX的一种)

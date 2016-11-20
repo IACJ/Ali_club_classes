@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>演示2</title>
+</head>
+<body>
+
+	<input type="text" id="account" />
+	<input type="password" id="password" />
+
+	<button onclick="myFunc()">submit</button>
+
+	<span id="response"></span> <!--用来响应的文字区，初始为空-->
+
+</body>
+</html>
+
+
+<script >
+
+var myAc = document.getElementById("account");
+var myPw = document.getElementById("password");
+var myRe = document.getElementById("response");
+
+function myFunc(){
+
+	myRe.innerHTML = "<br>你按了按钮!<br>"
+					 + "第一个框里的内容是"+myAc.value+"<br>"
+					 + "第二个框里的内容是"+myPw.value+"<br>"
+					 + "我可以把这些数据发送给服务器端的PHP，然后等待并接收PHP的回复,并处理回复的数据<br>"
+					 + "这样，我就可以在不刷新网页的情况下，把服务器的数据展示给用户<br>"
+					 + "这就是AJAX！<br><br>"
+					 + "接下来学习如何  “把这些数据发送给服务器端的PHP，然后接收PHP的回复” <br>";
+					 
+}
+
+
+</script>
+
+
+
+
+

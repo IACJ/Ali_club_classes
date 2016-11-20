@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>演示3</title>
+</head>
+<body>
+
+	<input type="text" id="account" />
+	<input type="password" id="password" />
+
+	<button onclick="myFunc()">submit</button>
+
+	<span id="response"></span> <!--用来响应的文字区，初始为空-->
+
+</body>
+</html>
+
+<script >
+
+var myAc = document.getElementById("account");
+var myPw = document.getElementById("password");
+var myRe = document.getElementById("response");
+
+function myFunc(){
+
+	var request = new XMLHttpRequest(); //创建新对象
+	
+
+	request.onreadystatechange = function(event) {  //先记住这个格式
+
+		if (request.readyState==4 && request.status==200) //先记住这个格式
+
+			var PHP_echo = request.responseText;      //收到 对方的回复（就是PHP的echo内容）
+
+			myRe.innerHTML = PHP_echo;                //直接把回复内容 写到网页里
+
+	}
+ 
+    request.open("POST","./action.php",true);   //指定POST还是GET |   指定发给谁  |  写true行了
+  
+    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');  //先记住这个格式
+  
+    request.send('username=' + myAc.value + '&pw=' + myPw.value );    //将表单的数据发给 PHP;
+}
+</script>
+
+
+
+
+
